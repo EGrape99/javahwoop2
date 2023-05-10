@@ -4,6 +4,16 @@ import org.junit.jupiter.api.Test;
 public class RadioTest {
 
     @Test
+    public void testSize() {
+        Radio station = new Radio(10);
+        Assertions.assertEquals(10, station.getSize());
+        Assertions.assertEquals(9, station.getMaxStation());
+        Assertions.assertEquals(0, station.getMinStation());
+        Assertions.assertEquals(100, station.getMaxVolume());
+        Assertions.assertEquals(0, station.getMinVolume());
+    }
+
+    @Test
     public void shouldSetToMaxStation() {
         Radio station = new Radio();
 
